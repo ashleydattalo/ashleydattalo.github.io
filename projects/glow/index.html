@@ -1,0 +1,281 @@
+<html>
+    <head>
+    <title>g(L)ow</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #6b87a5;
+      color: #333333;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+      font-family: "Source Sans Pro", Helvetica;
+    }
+
+    img {
+      display: block;
+    }
+
+    em {
+      font-size: 12px;
+    }
+
+    #signature {
+      margin-left: 30px;
+      font-style: oblique;
+    }
+
+    a:link,
+    a:visited {
+      color: #562296;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      width: 660px;
+      margin: auto;
+    }
+
+    .container {
+      width: 660px;
+      margin: auto;
+    }
+
+    #content {
+      width: 650px;
+      margin: 70px auto 0px auto;
+    }
+
+    #content article {
+      margin-bottom: 150px;
+    }
+
+    #content h1 {
+      /*color: #2d91a8;*/
+      color: white;
+      margin-bottom: 30px;
+      font-weight: 200;
+      font-size: 60px;
+    }
+
+    #content h2 {
+      /*color: black;*/
+      color: white;
+      margin-bottom: 30px;
+      font-weight: 200;
+      font-size: 48px;
+    }
+
+    #content h3 {
+      /*color: #287182;*/
+      color: white;
+      border-bottom: 1px solid black;
+      text-transform: uppercase;
+      margin: 30px 0px 30px 0px;
+      font-size: 28px;
+      font-weight: 200;
+    }
+
+    #content p {
+      width: 100%;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+
+    #content p:first-child {
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    #content p:first-child:first-line {
+        font-weight: bold;
+    }
+  
+    #content ul {
+        padding-left:25px
+    }
+
+    pre {
+      font-size: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section id="content">
+    <h1> g(L)ow </h1>
+    <h4>CPE 476 - Winter 2017 - Zoe Wood</h4>
+    <h4>Created by Sam Freed, Ashley Dattalo, Christiana Ushana</h4>
+      <article>
+
+  <h3>Game Clip</h3>
+<p>
+<center>
+  <video width=670 height=377 controls="true">
+    <source src="gameplay.mp4" type="video/mp4" />
+  </video>
+</center>
+</p>
+
+   
+    <h3>Description</h3>
+<center>
+  <img src="title.png" width="100%"/>
+  <em><a href="title.png">title.png</a></em>
+</center>
+
+<p> g(L)ow is a game based on exploration, collection and illumination. You, the user, will appear on a floating island as a wind spirit. As you observe the eerie island, you notice that it is lifeless and withering away. The goal of the game is to explore this floating island and retrieve magical orbs. These orbs will restore the health of the forest and increase the brightness and illumination of the trees.<br><br>
+
+The trees within this game were inspired by L System trees - mathematically generated trees that use rules and symbols to model growth processes. The main focus of this game is to revive the eerie forest - to do that, the user must move around the fog-covered island collecting magical orbs; the orbs incrementally increase the brightness (or glow) of the trees. And thus, the name of the game was born: "g(L)ow". The (L) in g(L)ow refers to the L System trees mentioned earlier. We achieved this glow by implementing Bloom into our game.<br><br>
+
+We wanted to also represent our user, the wind spirit, as a free flowing character. We achieved this using an intricate particle system that directs the user to the nearest orb. When approaching an orb, the particle system will flow toward the direction of the orb, indicating its location. 
+</p>
+
+  <h3>Controls</h3>
+
+<p>
+<li>Pressing the space bar will begin the game
+<li>WASD to move player around
+<li>Mouse will move the camera view
+</p>
+
+<h3>L System Trees</h3>
+<p>Within this game, there are seven different representations of L System Trees. The types of trees are as follows: fractal, gnarled, tall, strong, gnarled wave, tall wave, and strong wave. The trees with wave qualities have branches that are more rounded out and circular. The rest of the trees have branches with straighter characteristics. The L Trees are generated from three parts: an axiom, a ruleset, and operations. The axiom is the starting point for the L Tree. The ruleset describes how to modify the L Tree on each iteration. The operations describe how to build the geometry of the L Tree. Using different combinations of these three things, we can create a variety of different L Trees with different qualities.
+</p>
+
+<p><b>Fractal Tree</b>
+<center>
+  <img src="fractal.png" width="100%"/>
+  <em><a href="fractal.png">fractal.png</a></em>
+</center>
+</p>
+
+<p><b>Strong Tree</b>
+<center>
+  <img src="strong.png" width="100%"/>
+  <em><a href="strong.png">strong.png</a></em>
+</center>
+</p>
+
+<p><b>Strong Wave Tree</b>
+<center>
+  <img src="strong_wave.png" width="100%"/>
+  <em><a href="strong_wave.png">strong_wave.png</a></em>
+</center>
+</p>
+
+<p><b>Gnarled Wave Tree</b>
+<center>
+  <img src="gnarled_wave.png" width="100%"/>
+  <em><a href="gnarled_wave.png">gnarled_wave.png</a></em>
+</center>
+</p>
+
+<h3>Particle Systems</h3>
+<p> 
+Our game has two different kind of particle effects. The first is for the windspirit, and the second is for the orbs. 
+</p>
+
+<p><b>Wind Spirit</b>
+<p> 
+The particles for the windspirit are "pulled" towards the nearest orb. This is done by first determining the location of the nearest orb, and then applying a force vector that pushes the particles in that direction. 
+</p>
+
+<p><b>Orbs</b>
+<p> 
+  The position of the particles around the orbs are generated by using the equation for a helix spiral curve. By tweaking the amplitude and period of the equation, we are able to have the particles travel around the orb, and come back to the center of the orb.
+</p>
+<center>
+  <img src="particles.png" width="100%"/>
+  <em><a href="particles.png">particles.png</a></em>
+</center>
+</p>
+
+<h3>Shadows</h3>
+Shadow mapping is implemented for the main light source, however it is difficult to tell due to the number of point lights in the scene and due to the brightness of the main light. To show the shadows, the main light brightness was increased.
+<center>
+  <img src="shadows.png" width="100%"/>
+  <em><a href="shadows.png">shadows.png</a></em>
+</center>
+
+  <h3>Included Technologies</h3>
+<p>
+<li>Procedurally Generated L System Trees
+<li>3rd Person Spring Camera
+<li>Fog
+<li>Collision Detection using Spatial Data Structure
+<li>Level Editor and Loader
+<li>Shadow Mapping
+<li>Hierarchical View Frustum Culling
+<li>Deffered Shading
+<li>Bloom
+<li>Motion Blur
+<li>Particle Systems
+<li>Skybox
+<li>Heightmap
+<li>Quad Tree Spatial Data Structure
+<li>Entity Component System
+<li>Collision Sound Effects and Game Music
+</p>
+
+       <h3>Third Party Libraries</h3>
+       <ul>
+           <li>tiny_obj_loader.h from <a href="https://github.com/syoyo/tinyobjloader"> syoyo</a></li>
+           <li>stb_image.h from <a href="https://github.com/nothings/stb">nothings</a></li>
+           <li><a href="http://glm.g-truc.net/0.9.8/index.html">OpenGL Mathematics Library (GLM)</a></li>
+           <li><a href="https://github.com/miloyip/rapidjson">RapidJSON</a> from <a href="https://github.com/miloyip">Milo Yip</li>
+           <li><a href="http://www.glfw.org/">GLFW</a></li>
+           <li><a href="http://glew.sourceforge.net/">GLEW</a></li>
+           <li><a href="https://www.sfml-dev.org/">SFML</a></li>
+           <li><a href="https://github.com/ocornut/imgui">ImGui</a></li>
+        </ul>
+        
+       <h3>Resources</h3>
+       <ul>
+           <li><a href="http://www.mbsoftworks.sk/index.php?page=tutorials&series=1&tutorial=15">Fog Outside</a> by Megabyte Softworks</li>
+           <li><a href="http://www.iquilezles.org/www/articles/fog/fog.htm">Better Fog</a> by Íñigo Quílez</li>
+           <li><a href="http://in2gpu.com/2014/07/22/create-fog-shader/">Create a Fog Shader</a> from IN2GPU, by Sergiu Craitoiu</li>
+           <li><a href="https://github.com/apitrace/apitrace">Apitrace</a>, open source draw call debugger</li>
+           <li><a href="http://www.randygaul.net/2013/05/20/component-based-engine-design/">Component Based Engine Design</a> from Randy Gaul's Game Programming Blog</li>
+           <li><a href="https://gamedevelopment.tutsplus.com/tutorials/quick-tip-use-quadtrees-to-detect-likely-collisions-in-2d-space--gamedev-374">Quick Tip: Use Quadtrees to Detect Likely Collisions in 2D Space</a>  by Steven Lambert</li>
+           <li><a href="http://www.txutxi.com/?p=584">View Frustum Culling</a> from txutxi.com</li>
+           <li><a href="https://learnopengl.com/">Learn OpenGL</a></li>
+            <li><a href="https://unity3d.com/">Unity Engine</a></li>
+            <li>Kyle Piddington's <a href="https://github.com/kyle-piddington/MoonEngine">MoonEngine</a></li>
+            <li><a href="http://gameprogrammingpatterns.com/contents.html">Game Programming Patterns</a></li>
+            <li>Chapter 1 from <a href="http://algorithmicbotany.org/papers/abop/abop-ch1.pdf">Algorithmic Botany</a></li>
+            <li><a href="http://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/">Evolve Your Hierarchy</a> from Cowboy Programming</li>
+            <li><a href="https://thebookofshaders.com/">The Book of Shaders</a></li>
+            <li><a href="http://www.randygaul.net/2013/05/20/component-based-engine-design/">Component Based Engine Design</a> from Randy Gaul</li>
+            <li><a href="http://gafferongames.com/game-physics/fix-your-timestep/">Fix Your Timestep!</a></li>
+            <li><a href="http://www.sidefx.com/docs/houdini/nodes/sop/lsystem">About L-systems </a>from sidefx.com</li>
+            <li><a href="http://ogldev.atspace.co.uk">OGLdev Modern OpenGL Tutorials</a></li>
+            <li><a href="http://john-chapman-graphics.blogspot.com/2013/01/what-is-motion-blur-motion-pictures-are.html">John Chapman's Motion Blur Tutorial</a></li>
+            <li><a href="http://justanotherelectronicsblog.com/?p=179">Quick GUI for MBED projects using Dear ImGui and Serial</a></li>
+            <li><a href="http://www.chadvernon.com/blog/resources/directx9/terrain-generation-with-a-heightmap/">Terrain Generation with a Heightmap</a></li>
+            <li><a href="https://mattdesl.svbtle.com/drawing-lines-is-hard">Drawing Lines is Hard</a></li>
+            <li><a href="http://www.realtimerendering.com/">Real-Time Rendering</a></li>
+        </ul>
+  
+  <p><br> &copy; 2016, by Christiana Ushana, Sam Freed, &amp; Ashley Dattalo. All rights reserved.
+      </article>
+    </section>
+  </div>
+
+</body></html>

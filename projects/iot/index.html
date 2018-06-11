@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+height: 100%;
+        font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+   background-position: center;
+   background-size: cover;
+   background-image: url("http://www.audubon.org/sites/default/files/styles/hero_image/public/Light_Out_Hero__Credit_NASA-Earth-Observatory.jpg?itok=uscEMO3D");
+   min-height: 75%;
+}
+.menu {
+display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+<div class="w3-row w3-padding w3-black">
+<div class="w3-col s3">
+<a href="#" class="w3-btn-block w3-hover-white">HOME</a>
+</div>
+<div class="w3-col s3">
+<a href="#about" class="w3-btn-block w3-hover-white">ABOUT</a>
+</div>
+<div class="w3-col s3">
+<a href="#menu" class="w3-btn-block w3-hover-white">IMPLEMENTATION</a>
+</div>
+<div class="w3-col s3">
+<a href="#where" class="w3-btn-block w3-hover-white">DEVELOPERS</a>
+</div>
+</div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+<div class="w3-display-bottomleft w3-center w3-padding-xlarge w3-hide-small">
+<span class="w3-tag"></span>
+</div>
+<div class="w3-display-middle w3-center">
+<span class="w3-text-white" style="font-size:90px">It's Lit</span>
+</div>
+<div class="w3-display-bottomright w3-center w3-padding-xlarge">
+<span class="w3-text-white"></span>
+</div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+<div class="w3-content" style="max-width:700px">
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">It's Lit: a Home Automation Project</span></h5>
+<p>Fall 2016--CPE 458: Internet of Things
+  <br>Instructors: Foaad Khosmood, David Maluf, Raghuram Sudhaakar
+</p>
+<p>Have you ever walked into your house after a long day and just wished the lights would turn on for you? Or have you ever been sitting on your couch about to watch a movie, but wished you didn't have to get up off the couch to turn the lights off? If so, our project is perfect for you: laziness just got easier.</p>
+<p>We built a home automation motion sensing lights system. Two motion sensors detect movement when a person walks into a room and turn the light on automatically. The sensors detect whether or not a person is leaving OR entering the room; they will turn the light on/off accordingly. Additionally, we built a website that can control the state of the light, the brightness of the light, and whether or not to use motion sensing.</p>
+<div class="w3-panel w3-leftbar w3-light-grey">
+<p><i>"Wow, I haven't had to get off the couch all day!"</i></p>
+<p>-Emi Dusel (Roommate and User of Light Bulb)</p>
+</div>
+
+<!-- <video width="220" height="240" controls>
+  <source src="SensorDemo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<video width="220" height="240" controls left="100px">
+  <source src="WebsiteDemo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> -->
+
+<iframe width="320" height="315" src="https://www.youtube.com/embed/d69AjnwWBsQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="320" height="315" src="https://www.youtube.com/embed/bJZqRg3ZNoQ" frameborder="0" allowfullscreen></iframe>
+
+<br><br>
+
+<img src="https://webresource.its.calpoly.edu/cpwebtemplate/5.0.1/common/images_html/header/cp_logo_lrg.png">
+<img style="margin-left:100px; height:100px; width:225px;"src="http://logos-download.com/wp-content/uploads/2016/03/Cisco_logo_emblem_logotype.png">
+</div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+<div class="w3-content" style="max-width:700px">
+
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">IMPLEMENTATION</span></h5>
+
+
+<img src="light.jpg" style="margin-left:120px; width:25%; height:25%;">
+<img src="bridge.jpg" style="margin-left:120px; width:25%; height:25%;">
+
+<p>Pictured above are the Philips Hue Light Bulb (inside the lamp) and the Philips Hue Bridge. Our code connects to the Bridge using REST calls. The Bridge then controls the Philips Hue Light Bulb depending on the request it received.<p>
+
+<div align="center">
+<a href="IOTProjectReport.pdf" download>Slides from in-class presentation</a>
+</div>
+<br>
+
+<div class="w3-row w3-center w3-card-2 w3-padding">
+<a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+<div class="w3-col s6 tablink">Motion Sensing</div>
+</a>
+<a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+<div class="w3-col s6 tablink">Web Server</div>
+</a>
+</div>
+
+<div id="Eat" class="w3-container menu w3-padding-48 w3-card-2">
+  <h5>Setup</h5>
+  <p class="w3-text-grey">Each ultrasonic sensor is connected to its own Raspberry Pi, stationed a foot or two away from each other. Sensors calibrate for 10-20 seconds, determining approximately how far away the closest object is.</p><br>
+  <h5>Movement Detection</h5>
+  <p class="w3-text-grey">Each Pi runs code which continuously waits for a sensor to detect an object closer than the smallest calibration distance. When a closer object is sensed (which would happen as a person walks by), the sensors send the time that this detection happens to a small Flask server running on one of the Pis. Once the server gathers times from both Pis, it queries our web server for whether the light bulb's status should change based on motion sensor data.</p><br>
+  <h5>Setting the Bulb</h5>
+  <p class="w3-text-grey">If the web server is offline, the server will automatically act based on sensor data. Then, based on which sensor had the earlier detection time, the server will send a REST call to the Bridge to turn the lightbulb on or off.</p><br>
+
+  <img src="sensors.jpg" style="width:70%; height:70%;">
+ 
+</div>
+
+
+<div id="Drinks" class="w3-container menu w3-padding-48 w3-card-2">
+  <h5>Website Overview</h5>
+  <p class="w3-text-grey">From the website, a user is able to turn the light on/off with the click of a button. They are also able to adjust the brightness of the light bulb. Additionally, they can turn motion-sensing on/off from the website. This would be helpful if a user wants the light to stay on regardless of anyone leaving the room.</p><br>
+
+  <h5>How ON/OFF works:</h5>
+  <p class="w3-text-grey">When the user presses 'ON' to turn the light on, a PUT call is made to the Bridge. The Bridge recieves this request, and turns the light on. An example PUT request would be "http://[IP address of bridge]/api/[User ID for Bridge]/lights/1/state" with a body parameter of "{on: true}". When a user wants to adjust the brightness of the light bulb, a similar PUT call is made. The only difference is that the body parameter changes to: "{on: true, bri: [x]}", where x is a value from 0-254 and 254 is the maxium brightness of the bulb.</p><br>
+
+  <h5>How Motion Sensing Mode Works</h5>
+  <p class="w3-text-grey">When a user turns motion sensing either on/off, a PUT call is made to a route (/sensorStatus) hosted on our server. This PUT call puts either true or false, depending on what the user selected. When running, the Raspberry Pis make a GET request to this route. Depending on the value returned, they will either use motion sensing, or not use it. When motion sensing is turned off, only turning the light on/off from the website (or manually doing it) will turn the light on/off.</p><br>
+
+  <img src="website.png" style="width:80%;">
+</div>
+
+<br><br>
+<img src="functionalReqs.png" style="width:99%">
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+<div class="w3-content" style="max-width:700px">
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">DEVELOPERS</span></h5>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-69 w3-center" id="team">
+
+<div class="w3-row"><br>
+<div class="w3-half">
+  <h3>Ashley Dattalo</h3>
+  <p style="width:94%">Primarily worked on Web Server. Used Javascript, jQuery, and REST calls to communicate with Philips Hue Bridge.</p>
+</div>
+
+<div class="w3-half">
+  <h3>Cara Pew</h3>
+  <p style="width:94%">Primarily worked with Raspberry Pis and Ultrasonic Sensors. Used Python, Flask and REST to work with motion sensing.</p>
+</div>
+</div>
+<br>
+<text> Github Link: </text>
+<a href="https://github.com/ashleydattalo/Lit"> https://github.com/ashleydattalo/Lit </a>
+
+</div>
+</div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+<p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+// Google Map Location
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+   var mapProp = {
+center: myCenter,
+        zoom: 12,
+        scrollwheel: false,
+        draggable: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+   };
+
+   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+   var marker = new google.maps.Marker({
+position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+   var i, x, tablinks;
+   x = document.getElementsByClassName("menu");
+   for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+   }
+   tablinks = document.getElementsByClassName("tablink");
+   for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+   }
+   document.getElementById(menuName).style.display = "block";
+   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

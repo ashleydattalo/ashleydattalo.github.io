@@ -1,0 +1,60 @@
+<html>
+
+<head><link rel="stylesheet" type="text/css" href="style.css"></head>
+
+<body>
+	<header>
+	<h1>Rohin Chander and Ashley Dattalo</h1>
+	<h2>Space World</h2>
+	</header>
+	<br>
+		<img src="stuffFloating.jpg">
+	<br>
+	<p>For our project, we set out to create a solar system that contained multiple planets all with accurate gravity simulated. We used the actual actual formula for gravitional pull and orbit velocity to create this. This means that if a planet and star are a certain mass with a certain distance apart in space it would follow this the path shown in our project.</p>
+
+	<h3>Movement</h3>
+
+	<p>We allowed the player multiple ways to move around. The first was a free look camera, similar to the camera that was used in Assignment 4. This way makes it easy to navigate and move around the world. The second way was the space shuttle. The way this movement worked was the player would have to use the WASD keys in order to orient their spaceship to fly a certain direction. By pressing the spacebar, the player could accelerate in the direction they are facing. The ship would continue moving in this direction until acted on by another force which could be gravity from another planet or the player accelerating in a different direction.</p>
+
+	<h3>Bloom</h3>
+
+	<p>Bloom was probably the hardest thing to implement in this entire project. The code that was used was based off of <a href="http://learnopengl.com/#!Advanced-Lighting/Bloom">http://learnopengl.com/#!Advanced-Lighting/Bloom</a>. The way that bloom was accomplished in this project was through the use of multiple shaders. The way this works is that the objects are put through the original blinn-phong vertex and fragment shaders but the fragment shader has two outputs in this case. One that returns a normal scene and another which contains a scene with only the light source rendered. Both of these images are placed into to seperate frame buffers. Then the frame buffer with only the light source rendered is thrown into a loop which creates gaussian blur on the this frame buffer. The gaussian blur is made by blurring the image horizontally and vertically. The more often this is done the more of blur effect around the final image there is. After each pass of the loop, the result is stored in a frame buffer that is used as the starting point for the start of the next pass of the loop. If the loop ends, then that result is used in the final computation. Finally, in the post-processing shader, it takes both of the final frame buffers and overlays the blurred image on the orignal blinn-phong generated image. This shader also applies some HDR and gamma correction to make the lighting brighter.</p>
+
+	<img src="bloom.jpg">
+
+	<h3>Textures</h3>
+	For this project we downloaded multiple textures to add to the planets. We downloaded textures that looked like Mars, Venus, Earth, and Jupiter and many more. The textures were then put on the spheres to create the planet.
+	<br></br>
+	<img src="venus.jpg">
+	<br></br>
+	<img src="jupiter.jpg" height="500" width = "750">
+	<br></br>
+	<img src="planets.jpg" height="500" width = "650">
+	<br></br>
+	<img src="morePlanets.jpg" height="500" width="650">
+
+	<h3>Objects</h3>
+	For this project, we downloaded multiple obj files. Some included were: a spaceship, a space station, a Farmhouse, a moon, a New Tie Fighter, a UFO, a floating city, and an asteroid. Below is a picture of randomly generated objects mized with random textures, placed in random locations, of random size.  
+
+	<img src="Crazy.jpg" height="500" width="650">
+
+	<h3>Videos</h3>
+	
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/WhLjCuxgIrA" frameborder="0" allowfullscreen></iframe>
+
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/qe0YoFxYgjA" frameborder="0" allowfullscreen></iframe>
+
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/8Lw3d9iRQ3A" frameborder="0" allowfullscreen></iframe>
+
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/Yws49mhaCg8" frameborder="0" allowfullscreen></iframe>
+
+	<h3>Citations</h3>
+	The textures for Mars, Jupiter, Venus, and Earth were downloaded from:
+	<a href="http://planetpixelemporium.com/planets.html">http://planetpixelemporium.com/planets.html</a>. The rest of the texutures were downloaded from: <a href="http://www.turbosquid.com/search/index.cfm?keyword=space&sort_column=a5&sort_order=asc">http://www.turbosquid.com</a>.
+	<br>
+	All the object files were downloaded from: <a href="http://www.turbosquid.com/search/index.cfm?keyword=space&sort_column=a5&sort_order=asc">http://www.turbosquid.com</a>.
+
+	
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+for entry in `ls $search_dir`; do
+    echo $entry
+	convert $entry -print "Size: %wx%h\n" /dev/null
+	#convert -resize 50% $entry $entry
+	#convert $entry -print "Size: %wx%h\n" /dev/null
+	echo ' '	
+done
