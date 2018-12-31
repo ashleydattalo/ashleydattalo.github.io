@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title>Pick me!</title>
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+   <script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+   ================================================== -->
+   <link rel="shortcut icon" href="./images/homeScreen.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+            <li><a class="smoothscroll" href="#images">Images</a></li>
+            <li><a class="smoothscroll" href="#howItWorks">Software Engineering</a></li>
+            <li><a class="smoothscroll" href="#solverSource">References</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Pick Me!</h1>
+            <h3>Let me explain why.</h3>
+            <hr />
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+   <!-- trans Section
+   ================================================== -->
+   <section id="trans">
+
+      <div class="row">
+            <div style="width:100%;overflow-x:scroll;white-space: nowrap;">
+               <img src="./images/swirlOrange.png"  width="145" height="115" >
+               <img src="./images/swirlPink.png"  width="145" height="115" >
+               <img src="./images/swirlHotPink.png"  width="145" height="115" >
+               <img src="./images/swirlPinkPurple.png"  width="145" height="115" >
+               <img src="./images/swirlBlue.png"  width="145" height="115" >
+               <img src="./images/swirlPinkBlue.png"  width="145" height="115" >
+               <img src="./images/swirlBluePink.png"  width="145" height="115" >
+            </div>
+
+      </div> <!-- row End -->
+
+   </section> <!-- trans Section End-->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="">
+
+            <h1>About The Project</h1>
+
+            <p>For this project I wrote a program that generates Pov Ray Files to be used as input for the 473 Raytracer. The primary reason I choose this for my final project was because throughout the quarter I felt restricted when trying to create a cool scene. Here I was writing this awesome raytracer that had the power to generate beautiful images and yet I was limited to using the provided pov files or hard-coding a pov file (which was really tedius). So I wanted to create a tool that I could use to create my own scenes. The images on this website were all created using my final project. 
+               <br>
+               <br>
+            In the generated images, I focused on two main things: placement of objects and color of the objects. In many of the images, I used the parametric equation for a helix spiral curve to set the position of an object. I would then change different factors like the radius of the spiral curve or the axis direction the spiral traveled. Also in the images, you'll find different color gradients that the objects follow. This was simply done by interpolating between different colors.
+            </p>
+
+            <br>
+            <br>
+            <h3>Source Code: <a href="https://github.com/ashleydattalo/PovRayFileGenerator"><i class="fa fa-github"></i></a>
+               
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+
+
+   <!-- images Section
+   ================================================== -->
+   <section id="images">
+
+      <div class="row">
+            <h1>Projects: </h1>
+            <h3>The following are some of my favorite Computer Science projects I have built. They are in sequential order; starting with my first to my most complex.</h3>
+            <br>
+
+            <div>
+               <h2>It all started with 2048...</h2>
+               <h3>This project is the first full Computer Science project I worked on outside of school, just for fun. It was before I was a Computer Science major and it's the reason I swtiched my major to Computer Science.</h3>
+               <iframe width="660" height="395" src="https://www.youtube.com/embed/hyEl5W5X3vU?start=5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <div>
+               <h2>The Solar System Simulation</h2>
+               <h3>This project was for my first Computer Graphics class at Cal Poly. Working on this project was the most fun I've ever had working on a school project. It was also the first time I realized the magic of using physics and computer science to create mesmerizing simulations.</h3>
+               <iframe width="660" height="395" src="https://www.youtube.com/embed/WhLjCuxgIrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/qe0YoFxYgjA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <br>
+            <div>
+               <h2>The Fluid Renderer</h2>
+               <h3>For this project I implemented a 2D Fluid Dynamics Solver based off Jos Stam's research paper <a href="http://www.intpowertechcorp.com/GDC03.pdf">Real Time Fluid Dynamics for Games</a>. The paper explains how to simulate fluids and provides a C implementation of the solver. This implementation is based off of the Navier-Stokes equations which model the flow of fluids.
+               </h3>
+               <iframe width="660" height="395" src="https://www.youtube.com/embed/XraFASAoNuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+            <br>
+            <br>
+            <div>
+               <h2>Playing God with light:</h2>
+               <h3>For this project, my friend and I built a website that could turn a light on/off. 
+               </h3>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/bJZqRg3ZNoQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <br>
+            <div>
+               <h2>VR FUN!</h2>
+               <h3>This was a fun way for me to test 'drawing' in VR using the VR controllers. I built this project from scratch using Unity.
+               </h3>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/PqFktbiX5II" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/0YTvePkJGZg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <br>
+            <div>
+               <h2>My All time favorite project:</h2>
+               <h3>The galaxy simulation in VR! Best part about this project: drawing black holes and stars using the VR controllers. 
+               </h3>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/TG4YybutEQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/TG4YybutEQw?start=305" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+      </div> <!-- row End -->
+   </section> <!-- images Section End-->
+    <!-- images without pov files Section
+   ================================================== -->
+   <section id="images">
+
+      <div class="row">
+
+            
+
+      </div> <!-- row End -->
+   </section> <!-- images Section End-->
+
+
+
+
+
+   <!-- trans Section
+   ================================================== -->
+   <section id="trans">
+
+      <div class="row">
+            <div style="width:100%;overflow-x:scroll;white-space: nowrap;">
+               <img src="./images/swirlOrange.png"  width="145" height="115" >
+               <img src="./images/swirlPink.png"  width="145" height="115" >
+               <img src="./images/swirlHotPink.png"  width="145" height="115" >
+               <img src="./images/swirlPinkPurple.png"  width="145" height="115" >
+               <img src="./images/swirlBlue.png"  width="145" height="115" >
+               <img src="./images/swirlPinkBlue.png"  width="145" height="115" >
+               <img src="./images/swirlBluePink.png"  width="145" height="115" >
+            </div>
+
+      </div> <!-- row End -->
+
+   </section> <!-- trans Section End-->
+
+
+     <!-- howItWorks Section
+   ================================================== -->
+   <section id="howItWorks">
+
+      <div class="row">
+
+         <!-- <div class="twelve columns collapsed"> -->
+
+            <h1>Software Engineering Design:</h1>
+         
+            <p>
+               For my final project, I wanted to write a Pov Ray File Generator that anyone could use. The first time I wrote the generator code, it was integrated into my 473 Raytracer (it used my Camera, Sphere, Box, LightSouce, and other classes). But since I wanted anyone to use it, I rewrote it so people wouldn't need my raytracer code. The reason I'm mentioning this in the Software Engineering Design scetion, is because as I rewrote the generator I found that there were ways I could simplify/refactor my raytracer code.
+               <br>
+               <br>
+               For example, in the beginning of the quarter, I made a Color class to store object colors. But I found that as the quarter progressed this was annoying because if I wanted to access an object's color I would have to do this: "object.pigment.color.rgb" (The Pigment class stored one one varaible: Color *color). But when I redesigned the structure for my final project, I deleted the color class entirely, because it was pretty much a useless class. Instead I stored a vec3 inside the Pigment class that would represent the color. And this is a really minor example, but there are a couple other mistakes I made like this at the beginning of the quarter that were slightly annoying to deal with as the quarter progressed. 
+
+            </p>
+
+      </div> <!-- row End -->
+
+   </section> <!-- howItWorks Section End-->
+
+
+   <!-- trans Section
+   ================================================== -->
+   <section id="trans">
+
+      <div class="row">
+            <div style="width:100%;overflow-x:scroll;white-space: nowrap;">
+               <img src="./images/swirlOrange.png"  width="145" height="115" >
+               <img src="./images/swirlPink.png"  width="145" height="115" >
+               <img src="./images/swirlHotPink.png"  width="145" height="115" >
+               <img src="./images/swirlPinkPurple.png"  width="145" height="115" >
+               <img src="./images/swirlBlue.png"  width="145" height="115" >
+               <img src="./images/swirlPinkBlue.png"  width="145" height="115" >
+               <img src="./images/swirlBluePink.png"  width="145" height="115" >
+            </div>
+
+      </div> <!-- row End -->
+
+   </section> <!-- trans Section End-->
+
+
+  <!-- solverSource Section
+   ================================================== -->
+   <section id="solverSource">
+
+      <div class="row">
+
+         <!-- <div class="twelve columns collapsed"> -->
+
+            <h1>References:</h1>
+            <p>Color Gradient Code: <a href="http://www.andrewnoske.com/wiki/Code_-_heatmaps_and_color_gradients">here.</a></p>
+
+      </div> <!-- row End -->
+
+   </section> <!-- solverSource Section End-->
+
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="copyright">
+               <li>&copy; 2014 CeeVee</li>
+               <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+               <li>Sponsored by <a rel="nofollow" href="http://www.a2hosting.com/?utm___source=styleshoutdemo&utm_medium=__cpm&utm_content=&utm_campaign=">A2Hosting</a></li>
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+</body>
+
+</html>
